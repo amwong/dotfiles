@@ -1,3 +1,6 @@
+"detect file type
+filetype plugin on
+
 "show line numbers
 set number
 
@@ -7,7 +10,7 @@ set term=ansi
 "colors on
 syntax enable
 set t_Co=256
-colorscheme desert
+colorscheme elflord
 
 set encoding=utf8
 
@@ -24,9 +27,9 @@ set hlsearch
 "set ignorecase
 
 "handle 80 character limit
-"highlights text past 80 chars 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%80v.\+/
+"highlights text past 80 chars -- python only
+"autocmd FileType python highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"autocmd FileType python match OverLength /\%80v.\+/
 "auto line break at 80 characters"
 "set lbr
 "set tw=80
@@ -34,5 +37,11 @@ match OverLength /\%80v.\+/
 "set cc=80
 
 "cursor column color set
-highlight CursorLine ctermbg=darkred cterm=none
+highlight CursorLine ctermbg=none cterm=underline
 set cursorline
+
+"status line - {relative file path}/{file name} percentage
+set ruler
+"hi StatusLine term=none ctermfg=8 ctermbg=7
+set statusline=%f\ %p
+set laststatus=2
