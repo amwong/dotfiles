@@ -1,7 +1,11 @@
 PROMPT="%{%F{255}%}[%{%f%}%{%F{61}%}%n%{%f%}%{%F{245}%}@%{%f%}%{%F{72}%}%m%{%f%}%{%F{245}%}:%{%f%}%{%F{18}%}%~%{%f%}%{%F{255}%}]%{%f%}%# "
 #RPROMPT=$'$(vcs_info_wrapper)'
 
-
+#mkdir, cd into it
+mkcd () {
+  mkdir -p "$*"
+  cd "$*"
+}
 
 export PIP_REQUIRE_VIRTUALENV=true
 source /usr/local/bin/virtualenvwrapper.sh
@@ -9,6 +13,9 @@ source /usr/local/bin/virtualenvwrapper.sh
 alias .="source"
 alias ls='ls --color=auto'
 alias reloadzsh=". $STOW_DIR/zsh/.zshrc && echo 'ZSH config reloaded from $STOW_DIR/zsh/.zshrc'"
+alias lr='ls -R'
+alias la='ls -al'
+alias grep='grep --color=auto'
 
 # VCS Info
 zstyle ':vcs_info:*' actionformats \
