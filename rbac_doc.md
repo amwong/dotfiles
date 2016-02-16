@@ -22,20 +22,20 @@ Note that cloud_admin privileges for project resources are not automatically ext
 
 Feature | cloud_admin | project_admin (within project) |  \_member\_
 ------- | ----------- | ------------------------------ | -----------
-Users |||
+**Users** |||
 Create user | Y |  Y  | N
 Update user | Y |  Y  | Y (Self)
 Get user    |Y  | Y  | Y (Self)
 Delete user |Y  | Y |  N
 Change password | Y  | Y  | Y (Self)
 List user   |Y  | Y |  N
-Roles|||
+**Roles**|||
 Create role | N |  N|   N
 Update role |N  | N  | N
 Get role    |Y  | Y |  N
 Delete role |N  | N |  N
 List role   |Y  | Y |  N
-Projects|||
+**Projects**|||
 Create project  |Y  | N |  N
 Update project  |Y  | Y |  N
 Get project| Y   |Y   |N
@@ -43,7 +43,7 @@ Delete project  |Y  | N   |N
 List projects   |Y  | Y  | N
 List user projects  |Y  | Y  | Y (Self)
 List users within projects  |Y|   Y  | N
-Groups|||
+**Groups**|||
 Create, update, or delete group| Y  | N |  N
 Get group   |Y  | Y |  Y
 List groups |Y  | Y  | Y
@@ -77,7 +77,7 @@ You can request access for multiple users in a single ticket. The users should r
 ###Adding a project
 1. Log in to the dashboard and choose the Admin_Project project (or another project where you have the Cloud_Admin role) from the CURRENT PROJECT list.
 2. In the Admin tab, open the Identity Panel and click on **Projects**.
-3. Click Create Project.
+3. Click **Create Project**.
 4. On the Project Info tab in the Create Project window, enter a name and description for the project. By default, the project is enabled.
 5. On the Project Members tab, add members to the project and assign the appropriate roles.
 6. On the Project Groups tab, add groups of users to the project and assign the appropriate roles.
@@ -91,7 +91,7 @@ You can update a project to change its name or description, and to enable or tem
 1. In the Admin tab, open the Identity Panel and click on **Projects**.
 2. Select the project that you want to update.
 3. Select Edit Project from the More list.
-4. In the Edit Project window, you can update a project to change its name or description, and to enable or temporarily disable it. By default, the project is enabled. To temporarily disable it, clear the **Enabled** check box. To enable a disabled project, select the Enabled check box.
+4. In the Edit Project window, you can update a project to change its name or description, and to enable or temporarily disable it. By default, the project is enabled. To temporarily disable it, clear the **Enabled** check box. To enable a disabled project, select the **Enabled** check box.
 5. Click **Save**.
 
 ###Modifying user assignments for a project
@@ -116,18 +116,18 @@ You can also assign groups of users in the Project Groups tab.
 If you have the Cloud_Admin and Project_Admin roles you can create new user accounts. When you create a user account, you must assign the account to a primary project. You also have the option of assigning the account to additional projects. Before you can delete a user account, you must remove the user account from its primary project.
 
 1. Log in to the dashboard and choose the Admin_Project project (or another project where you have the Cloud_Admin or Project_Admin role assigned) from the CURRENT PROJECT list.
-2. In the Admin tab, open the Identity Panel and click on Users.
-3. Click Create User.
-4. In the Create User window, enter a user name, email, and preliminary password for the user. Confirm the password. Select a project from the Primary Project list. Choose a role for the user from the Role list. Default is Member.
-5. Click Create User to confirm your changes.
+2. In the Admin tab, open the Identity Panel and click on **Users**.
+3. Click **Create User**.
+4. In the **Create User** window, enter a user name, email, and preliminary password for the user. Confirm the password. Select a project from the Primary Project list. Choose a role for the user from the Role list. Default is Member.
+5. Click **Create User** to confirm your changes.
 The dashboard assigns an ID to the user, and the user appears in the Users category.
 
 ###Disabling or enabling a user
 If you have the Cloud_Admin role you can enable and disable user accounts. When you disable a user account, the user can no longer log in. However, the data for the user is maintained so that you can enable the user at any time.
 
-1. In the Admin tab, open the Identity panel and click on Users.
+1. In the Admin tab, open the Identity panel and click on **Users**.
 2. Locate the user that you want to disable or enable in the Users list.
-3. Select Disable User or Enable User from the More list.
+3. Select **Disable User** or **Enable User** from the **More** list.
 In the Enabled column, the enabled value updates to either True or False.
 
 
