@@ -1,27 +1,19 @@
 #Managing users and projects
 ##Basic concepts
-**Users**
 
-A user is an individual or a service with login credentials to the OpenStack environment. A user has one or more roles and belongs to one or more projects.
+**Users**: A user is an individual or a service with login credentials to the OpenStack environment. A user has one or more roles and belongs to one or more projects.
 
+**Projects**: Projects are organizational units in the cloud, and are also known as tenants or accounts. Each user is a member of one or more projects. Within a project, a user creates and manages resources such as instances and volumes. Administrators can set limits to how many resources (instances, vCPU, volumes, and more) that a project is allowed to create.
 
-**Projects**
+**Roles**: A role is a group of privileges that allow a user to perform a specific set of operations.
 
-Projects are organizational units in the cloud, and are also known as tenants or accounts. Each user is a member of one or more projects. Within a project, a user creates and manages resources such as instances and volumes. Administrators can set limits to how many resources (instances, vCPU, volumes, and more) that a project is allowed to create.
-
-**Roles**
-
-A role is a group of privileges that allow a user to perform a specific set of operations.
-
-**Groups**
-
-Groups work as the link between users and roles. A user can be a member of one or more groups and a group can have one or more roles associated with it.
+**Groups**: Groups work as the link between users and roles. A user can be a member of one or more groups and a group can have one or more roles associated with it.
 
 Your IBM Cloud OpenStack Services installation comes with four predefined roles: **cloud_admin**, **project_admin**, **_member_**, and **heat_stack_owner**.
 
 - **cloud_admin** allows cloud level access control. This allows you to perform API execution irrespective of the project you belong to.
 - **project_admin** allows project level access control.
-- **_member_** allows the user to use the resources (like instances and volumes) that are allocated for the project.
+- **\_member\_** allows the user to use the resources (like instances and volumes) that are allocated for the project.
 - **heat_stack_owner** allows the user to create heat stacks in the project.
 
 With your IBM Cloud OpenStack Services installation you receive one user with Cloud_Admin privileges who can create other users.
@@ -76,8 +68,8 @@ If you want your users to be able to open a support ticket, you must request acc
 - Cell phone
 - Job title
 - Role: Manager or Performer
-  - Manager can view all tickets across the entire instance. Select this role for users with Project_Admin privileges.
-  - Performer can view only the tickets which they open. Select this role for users with _member_ privileges.
+  - **Manager** can view all tickets across the entire instance. Select this role for users with Project_Admin privileges.
+  - **Performer** can view only the tickets which they open. Select this role for users with _member_ privileges.
 You can request access for multiple users in a single ticket. The users should receive their login credentials by email within four business days.
 
 ##Using the dashboard
