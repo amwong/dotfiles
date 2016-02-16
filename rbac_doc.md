@@ -18,23 +18,24 @@ Your IBM Cloud OpenStack Services installation comes with four predefined roles:
 
 With your IBM Cloud OpenStack Services installation you receive one user with Cloud_Admin privileges who can create other users.
 
-Note that Cloud\_Admin privileges for project resources are not automatically extended to newly created projects. You must manually add Cloud\_Admin privileges to any new projects. You might prefer that the Project\_Admin has control of the project resources instead of the Cloud\_Admin. This means that the Cloud_Admin cannot view or manage the project resources such as instances and volumes. If you want the Cloud_Admin to have privileges for user-defined projects, you should assign the Cloud_Admin role under that project using the dashboard or the REST API.
+Note that cloud_admin privileges for project resources are not automatically extended to newly created projects. You must manually add cloud_admin privileges to any new projects. You might prefer that the project_admin has control of the project resources instead of the cloud_admin. This means that the cloud_admin cannot view or manage the project resources such as instances and volumes. If you want the cloud_admin to have privileges for user-defined projects, you should assign the cloud_admin role under that project using the dashboard or the REST API.
 
-Feature Cloud_Admin Project_Admin (within project)  _member_
-Users
-Create user Y   Y   N
-Update user Y   Y   Y (Self)
-Get user    Y   Y   Y (Self)
-Delete user Y   Y   N
-Change password Y   Y   Y (Self)
-List user   Y   Y   N
-Roles
-Create role N   N   N
-Update role N   N   N
-Get role    Y   Y   N
-Delete role N   N   N
-List role   Y   Y   N
-Projects
+Feature | cloud_admin | project_admin (within project) |  \_member\_
+------- | ----------- | ------------------------------ | -----------
+Users   |             |                                |  
+Create user | Y |  Y  | N
+Update user| Y   Y   Y (Self)
+Get user    |Y   Y   Y (Self)
+Delete user |Y   Y   N
+Change password| Y   Y   Y (Self)
+List user   |Y   Y   N
+Roles|||
+Create role| N   N   N
+Update role |N   N   N
+Get role    |Y   Y   N
+Delete role |N   N   N
+List role   |Y   Y   N
+Projects|||
 Create project  Y   N   N
 Update project  Y   Y   N
 Get project Y   Y   N
