@@ -9,7 +9,7 @@
 
 **Groups**: Groups work as the link between users and roles. A user can be a member of one or more groups and a group can have one or more roles associated with it.
 
-Your IBM Cloud OpenStack Services installation comes with four predefined roles: **cloud_admin**, **project_admin**, **_member_**, and **heat_stack_owner**.
+Your IBM Cloud OpenStack Services installation comes with four predefined roles: **cloud_admin**, **project_admin**, **\_member\_**, and **heat_stack_owner**.
 
 - **cloud_admin** allows cloud level access control. This allows you to perform API execution irrespective of the project you belong to.
 - **project_admin** allows project level access control.
@@ -18,7 +18,7 @@ Your IBM Cloud OpenStack Services installation comes with four predefined roles:
 
 With your IBM Cloud OpenStack Services installation you receive one user with Cloud_Admin privileges who can create other users.
 
-Note that Cloud_Admin privileges for project resources are not automatically extended to newly created projects. You must manually add Cloud_Admin privileges to any new projects. You might prefer that the Project_Admin has control of the project resources instead of the Cloud_Admin. This means that the Cloud_Admin cannot view or manage the project resources such as instances and volumes. If you want the Cloud_Admin to have privileges for user-defined projects, you should assign the Cloud_Admin role under that project using the dashboard or the REST API.
+Note that Cloud\_Admin privileges for project resources are not automatically extended to newly created projects. You must manually add Cloud\_Admin privileges to any new projects. You might prefer that the Project\_Admin has control of the project resources instead of the Cloud\_Admin. This means that the Cloud_Admin cannot view or manage the project resources such as instances and volumes. If you want the Cloud_Admin to have privileges for user-defined projects, you should assign the Cloud_Admin role under that project using the dashboard or the REST API.
 
 Feature Cloud_Admin Project_Admin (within project)  _member_
 Users
