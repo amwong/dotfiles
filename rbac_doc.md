@@ -22,34 +22,34 @@ Note that cloud_admin privileges for project resources are not automatically ext
 
 Feature | cloud_admin | project_admin (within project) |  \_member\_
 ------- | ----------- | ------------------------------ | -----------
-Users   |             |                                |  
+Users
 Create user | Y |  Y  | N
-Update user| Y   Y   Y (Self)
-Get user    |Y   Y   Y (Self)
-Delete user |Y   Y   N
-Change password| Y   Y   Y (Self)
-List user   |Y   Y   N
-Roles|||
-Create role| N   N   N
-Update role |N   N   N
-Get role    |Y   Y   N
-Delete role |N   N   N
-List role   |Y   Y   N
-Projects|||
-Create project  Y   N   N
-Update project  Y   Y   N
-Get project Y   Y   N
-Delete project  Y   N   N
-List projects   Y   Y   N
-List user projects  Y   Y   Y (Self)
-List users within projects  Y   Y   N
+Update user | Y |  Y  | Y (Self)
+Get user    |Y  | Y  | Y (Self)
+Delete user |Y  | Y |  N
+Change password | Y  | Y  | Y (Self)
+List user   |Y  | Y |  N
+Roles
+Create role | N |  N|   N
+Update role |N  | N  | N
+Get role    |Y  | Y |  N
+Delete role |N  | N |  N
+List role   |Y  | Y |  N
+Projects
+Create project  |Y  | N |  N
+Update project  |Y  | Y |  N
+Get project| Y   |Y   |N
+Delete project  |Y  | N   |N
+List projects   |Y  | Y  | N
+List user projects  |Y  | Y  | Y (Self)
+List users within projects  |Y|   Y  | N
 Groups
-Create, update, or delete group Y   N   N
-Get group   Y   Y   Y
-List groups Y   Y   Y
-List groups for user    Y   Y   N
-List users in group Y   Y   Y
-Add or remove user from group   Y   Y   N
+Create, update, or delete group| Y  | N |  N
+Get group   |Y  | Y |  Y
+List groups |Y  | Y  | Y
+List groups for user  |  Y  | Y |  N
+List users in group |Y  | Y  | Y
+Add or remove user from group |  Y  | Y|   N
 ##[group stuff]
 ###Consequences of disabling projects
 Users with the Cloud_Admin role can enable and disable projects. When you disable a project, it has these consequences:
