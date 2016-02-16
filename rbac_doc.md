@@ -1,7 +1,9 @@
 #Managing users and projects
 ##Basic concepts
-**Users** 
+**Users**
+
 A user is an individual or a service with login credentials to the OpenStack environment. A user has one or more roles and belongs to one or more projects.
+
 
 **Projects**
 
