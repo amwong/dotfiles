@@ -101,8 +101,8 @@ When you create users, you must assign them to a primary or default project. You
 
 1. In the Admin tab, open the Identity Panel and click on **Projects**.
 2. Click the **Modify Users** button for the project that you want to modify.
-The Edit Project window shows these lists of users:
 
+The Edit Project window shows these lists of users:
 - **All Users**: Users that are available to be assigned to the current project.
 - **Project Members**: Users that are assigned to the current project.
 You can also assign groups of users in the Project Groups tab.
