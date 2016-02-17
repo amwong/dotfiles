@@ -16,7 +16,7 @@ Your IBM Cloud OpenStack Services installation comes with four predefined roles:
 - **\_member\_** allows the user to use the resources (like instances and volumes) that are allocated for the project.
 - **heat_stack_owner** allows the user to create heat stacks in the project.
 
-With your IBM Cloud OpenStack Services installation you receive one user with Cloud_Admin privileges who can create other users.
+With your IBM Cloud OpenStack Services installation you receive one user with cloud_admin privileges who can create other users.
 
 Note that cloud_admin privileges for project resources are not automatically extended to newly created projects. You must manually add cloud_admin privileges to any new projects. You might prefer that the project_admin has control of the project resources instead of the cloud_admin. This means that the cloud_admin cannot view or manage the project resources such as instances and volumes. If you want the cloud_admin to have privileges for user-defined projects, you should assign the cloud_admin role under that project using the dashboard or the REST API.
 
@@ -52,7 +52,7 @@ List users in group |Y  | Y  | Y
 Add or remove user from group |  Y  | Y|   N
 ##[group stuff]
 ###Consequences of disabling projects
-Users with the Cloud_Admin role can enable and disable projects. When you disable a project, it has these consequences:
+Users with the cloud_admin role can enable and disable projects. When you disable a project, it has these consequences:
 
 - In the dashboard, users can no longer access the project from the CURRENT PROJECT list on the Project tab.
 - Users who are members of only the disabled project can no longer log in.
@@ -69,13 +69,13 @@ If you want your users to be able to open a support ticket, you must request acc
 - Cell phone
 - Job title
 - Role: Manager or Performer
-  - **Manager** can view all tickets across the entire instance. Select this role for users with Project_Admin privileges.
+  - **Manager** can view all tickets across the entire instance. Select this role for users with project_admin privileges.
   - **Performer** can view only the tickets which they open. Select this role for users with _member_ privileges.
 You can request access for multiple users in a single ticket. The users should receive their login credentials by email within four business days.
 
 ##Using the dashboard
 ###Adding a project
-1. Log in to the dashboard and choose the Admin_Project project (or another project where you have the Cloud_Admin role) from the CURRENT PROJECT list.
+1. Log in to the dashboard and choose the Admin_Project project (or another project where you have the cloud_admin role) from the CURRENT PROJECT list.
 2. In the Admin tab, open the Identity Panel and click on **Projects**.
 3. Click **Create Project**.
 4. On the Project Info tab in the Create Project window, enter a name and description for the project. By default, the project is enabled.
@@ -95,7 +95,7 @@ You can update a project to change its name or description, and to enable or tem
 5. Click **Save**.
 
 ###Modifying user assignments for a project
-If you have the Cloud_Admin role you can assign roles on any project. If you have the Project_Admin role you can modify assignments on projects where you have the Project_Admin role applied.
+If you have the cloud_admin role you can assign roles on any project. If you have the project_admin role you can modify assignments on projects where you have the project_admin role applied.
 
 When you create users, you must assign them to a primary or default project. You can assign users to additional projects or update and remove assignments.
 
@@ -113,9 +113,9 @@ You can also assign groups of users in the Project Groups tab.
 3. Click **Delete Projects** to confirm the deletion.
 
 ###Creating a user account
-If you have the Cloud_Admin and Project_Admin roles you can create new user accounts. When you create a user account, you must assign the account to a primary project. You also have the option of assigning the account to additional projects. Before you can delete a user account, you must remove the user account from its primary project.
+If you have the cloud_admin and project_admin roles you can create new user accounts. When you create a user account, you must assign the account to a primary project. You also have the option of assigning the account to additional projects. Before you can delete a user account, you must remove the user account from its primary project.
 
-1. Log in to the dashboard and choose the Admin_Project project (or another project where you have the Cloud_Admin or Project_Admin role assigned) from the CURRENT PROJECT list.
+1. Log in to the dashboard and choose the Admin_Project project (or another project where you have the cloud_admin or project_admin role assigned) from the CURRENT PROJECT list.
 2. In the Admin tab, open the Identity Panel and click on **Users**.
 3. Click **Create User**.
 4. In the **Create User** window, enter a user name, email, and preliminary password for the user. Confirm the password. Select a project from the Primary Project list. Choose a role for the user from the Role list. Default is Member.
@@ -123,7 +123,7 @@ If you have the Cloud_Admin and Project_Admin roles you can create new user acco
 The dashboard assigns an ID to the user, and the user appears in the Users category.
 
 ###Disabling or enabling a user
-If you have the Cloud_Admin role you can enable and disable user accounts. When you disable a user account, the user can no longer log in. However, the data for the user is maintained so that you can enable the user at any time.
+If you have the cloud_admin role you can enable and disable user accounts. When you disable a user account, the user can no longer log in. However, the data for the user is maintained so that you can enable the user at any time.
 
 1. In the Admin tab, open the Identity panel and click on **Users**.
 2. Locate the user that you want to disable or enable in the Users list.
