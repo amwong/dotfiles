@@ -18,7 +18,6 @@ Your IBM Cloud OpenStack Services installation comes with four predefined roles:
 
 With your IBM Cloud OpenStack Services installation you receive one user with cloud_admin privileges who can create other users.
 
-Note that cloud_admin privileges for project resources are not automatically extended to newly created projects. You must manually add cloud_admin privileges to any new projects. You might prefer that the project_admin has control of the project resources instead of the cloud_admin. This means that the cloud_admin cannot view or manage the project resources such as instances and volumes. If you want the cloud_admin to have privileges for user-defined projects, you should assign the cloud_admin role under that project using the dashboard or the REST API.
 
 Feature | cloud_admin | project_admin (within project) |  \_member\_
 ------- | ----------- | ------------------------------ | -----------
