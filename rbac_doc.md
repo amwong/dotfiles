@@ -63,7 +63,7 @@ You can see the difference in approach by these two illustrations.
 
 ###image1
 
-This figure shows an example of traditional role assignments as supported by Keystone v2 API. The cloud_admin User has the cloud_admin role for Project 1, Project 2, and Project 3. User 1 has the Project_admin role for Project 2. User 2 and Support User 1 have the \_member\_ role for Project 2. Support User 1 also has the \_member\_ role for Project 3.
+This figure shows an example of traditional role assignments as supported by Keystone v2 API. The cloud_admin User has the cloud_admin role for Project 1, Project 2, and Project 3. User 1 has the project_admin role for Project 2. User 2 and Support User 1 have the \_member\_ role for Project 2. Support User 1 also has the \_member\_ role for Project 3.
 
 ###image2
 
@@ -86,7 +86,7 @@ If you want your users to be able to open a support ticket, you must request acc
 - Job title
 - Role: Manager or Performer
   - **Manager** can view all tickets across the entire instance. Select this role for users with project_admin privileges.
-  - **Performer** can view only the tickets which they open. Select this role for users with _member_ privileges.
+  - **Performer** can view only the tickets which they open. Select this role for users with \_member\_ privileges.
 You can request access for multiple users in a single ticket. The users should receive their login credentials by email within four business days.
 
 ##Using the dashboard
