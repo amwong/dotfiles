@@ -2,6 +2,7 @@
 ##Basic concepts
 
 **Users**: A user is an individual or a service with login credentials to the OpenStack environment. A user has one or more roles and belongs to one or more projects.
+
 **Projects**: Projects are organizational units in the cloud, and are also known as tenants or accounts. Each user is a member of one or more projects. Within a project, a user creates and manages resources such as instances and volumes. Administrators can set limits to how many resources (instances, vCPU, volumes, and more) that a project is allowed to create.
 
 **Roles**: A role is a group of privileges that allow a user to perform a specific set of operations.
