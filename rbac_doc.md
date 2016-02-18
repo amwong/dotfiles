@@ -146,4 +146,9 @@ If you have the cloud_admin role you can enable and disable user accounts. When 
 3. Select **Disable User** or **Enable User** from the **More** list.
 In the Enabled column, the enabled value updates to either True or False.
 
+##Limitations
+This role structure requires Keystone API v3 to run. Currently, the dashboard-generated RC files enables Keystone v2.0. Switching to v3 requires changes to the standard RC file.
 
+```export OS_AUTH_URL=https://example.com:5000/v3
+...
+export OS_IDENTITY_API_VERSION=3```
