@@ -11,8 +11,8 @@
 
 Your IBM Cloud OpenStack Services installation comes with four predefined roles: **cloud_admin**, **project_admin**, **\_member\_**, and **heat_stack_owner**.
 
-- **cloud_admin** allows cloud level access control. This allows you to perform API execution irrespective of the project you belong to.
-- **project_admin** allows project level access control.
+- **cloud_admin** allows cloud level access control. This allows you to perform API execution irrespective of the project you belong to. This role can create and manage quotas, groups, users and projects, and perform administrative volume actions. 
+- **project_admin** allows project level access control. This user can perform user and project mangement within the specified project.
 - **\_member\_** allows the user to use the resources (like instances and volumes) that are allocated for the project.
 - **heat_stack_owner** allows the user to create heat stacks in the project.
 
@@ -20,6 +20,7 @@ With your IBM Cloud OpenStack Services installation you receive one user with cl
 
 ###TODO: move limitations up here. and note that you have to use new openstack client.
 ###TODO: customers not given admin access only cloud admin, add stuff in chart (specifics on differences)
+###TODO: admin vs cloud admin actions
 
 
 
