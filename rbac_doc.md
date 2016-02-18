@@ -61,7 +61,7 @@ Another common use case would be to create a cloud_admin group that is given the
 
 You can see the difference in approach by these two illustrations.
 
-###image1
+![User Management With Roles](http://open.ibmcloud.com/documentation/_images/UserManagementWithRoles.gif)
 
 This figure shows an example of traditional role assignments as supported by Keystone v2 API. The cloud_admin User has the cloud_admin role for Project 1, Project 2, and Project 3. User 1 has the project_admin role for Project 2. User 2 and Support User 1 have the \_member\_ role for Project 2. Support User 1 also has the \_member\_ role for Project 3.
 
