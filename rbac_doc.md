@@ -51,7 +51,22 @@ List groups for user  | Y | Y | Y (Self)
 List users in group | Y  | Y | Y
 Add or remove user from group | Y | Y| N
 
-##[group stuff]
+###Using the Keystone v3 group function 
+
+The version 3 of the Keystone API with IBM Cloud OpenStack Services introduces the concept of groups. You can use groups to quickly and easily make multiple assignments simultaneously.
+
+For example, you might have a support team which needs access to every project in your environment. Instead of individually adding each member to every project, you can create a group called Support, give the group the \_member\_ role on all of your projects, and then add all of your support staff to the group.
+
+Another common use case would be to create a cloud_admin group that is given the cloud_admin role on every project on the environment. This allows the cloud_admin to easily elevate a user’s privileges by temporarily adding them to the cloud_admin group and could be used in situations like vacation coverage.
+
+You can see the difference in approach by these two illustrations.
+
+###image1
+
+This figure shows an example of traditional role assignments as supported by Keystone v2 API. The cloud_admin User has the cloud_admin role for Project 1, Project 2, and Project 3. User 1 has the Project_admin role for Project 2. User 2 and Support User 1 have the \_member\_ role for Project 2. Support User 1 also has the \_member\_ role for Project 3.
+
+###image2
+
 ###Consequences of disabling projects
 Users with the cloud_admin role can enable and disable projects. When you disable a project, it has these consequences:
 
