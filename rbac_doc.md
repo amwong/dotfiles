@@ -16,7 +16,11 @@ Your IBM Cloud OpenStack Services installation comes with four predefined roles:
 - **\_member\_** allows the user to use the resources (like instances and volumes) that are allocated for the project.
 - **heat_stack_owner** allows the user to create heat stacks in the project.
 
-With your IBM Cloud OpenStack Services installation you receive one user with cloud_admin privileges who can create other users.
+With your IBM Cloud OpenStack Services installation you receive one user with cloud_admin privileges who can create other projects and users. The cloud_admin can grant users cloud_admin and lower privileged roles.
+
+###TODO: move limitations up here. and note that you have to use new openstack client.
+###TODO: customers not given admin access only cloud admin, add stuff in chart (specifics on differences)
+
 
 
 Feature | cloud_admin | project_admin (within project) |  \_member\_
@@ -60,6 +64,7 @@ Another common use case would be to create a cloud_admin group that is given the
 
 You can see the difference in approach by these two illustrations.
 
+###TODO: update these two images
 ![User Management With Roles](http://open.ibmcloud.com/documentation/_images/UserManagementWithRoles.gif)
 
 This figure shows an example of traditional role assignments as supported by Keystone v2 API. The cloud_admin User has the cloud_admin role for Project 1, Project 2, and Project 3. User 1 has the project_admin role for Project 2. User 2 and Support User 1 have the \_member\_ role for Project 2. Support User 1 also has the \_member\_ role for Project 3.
@@ -159,3 +164,5 @@ export OS_VOLUME_API_VERSION=2
 export OS_COMPUTE_API_VERSION=2
 export OS_IDENTITY_API_VERSION=3
 ```
+
+###ADD: Keystone functions must be performed using the new `python-openstackclient` CLI
