@@ -1,6 +1,22 @@
 #Managing users and projects
-##Basic concepts
+##Requirements
+This role structure requires Keystone API v3 to run. Currently, the dashboard-generated RC files enables Keystone v2.0. Switching to v3 requires changes to the standard RC file. The `OS_AUTH_URL` must be changed from `v2.0` to `v3`, and the `OS_IDENTITY_API_VERSION` must be created and set to `3`. A sample RC file is shown below.
 
+```
+export OS_PASSWORD=pass
+export OS_AUTH_URL=https://example.ibm.com:5000/v3
+export OS_USERNAME=project_admin
+export OS_TENANT_NAME=demo
+export OS_CACERT=/opt/stack/ssl/openstack.crt
+export OS_NO_CACHE=True
+export OS_VOLUME_API_VERSION=2
+export OS_COMPUTE_API_VERSION=2
+export OS_IDENTITY_API_VERSION=3
+```
+
+Additionally, Keystone functions must be performed using the new `python-openstackclient` CLI.
+
+##Basic concepts
 **Users**: A user is an individual or a service with login credentials to the OpenStack environment. A user has one or more roles and belongs to one or more projects.
 
 **Projects**: Projects are organizational units in the cloud, and are also known as tenants or accounts. Each user is a member of one or more projects. Within a project, a user creates and manages resources such as instances and volumes. Administrators can set limits to how many resources (instances, vCPU, volumes, and more) that a project is allowed to create.
@@ -150,20 +166,3 @@ If you have the cloud_admin role you can enable and disable user accounts. When 
 2. Locate the user that you want to disable or enable in the Users list.
 3. Select **Disable User** or **Enable User** from the **More** list.
 In the Enabled column, the enabled value updates to either True or False.
-
-##Limitations
-This role structure requires Keystone API v3 to run. Currently, the dashboard-generated RC files enables Keystone v2.0. Switching to v3 requires changes to the standard RC file. The `OS_AUTH_URL` must be changed from `v2.0` to `v3`, and the `OS_IDENTITY_API_VERSION` must be created and set to `3`. A sample RC file is shown below.
-
-```
-export OS_PASSWORD=pass
-export OS_AUTH_URL=https://example.ibm.com:5000/v3
-export OS_USERNAME=project_admin
-export OS_TENANT_NAME=demo
-export OS_CACERT=/opt/stack/ssl/openstack.crt
-export OS_NO_CACHE=True
-export OS_VOLUME_API_VERSION=2
-export OS_COMPUTE_API_VERSION=2
-export OS_IDENTITY_API_VERSION=3
-```
-
-###ADD: Keystone functions must be performed using the new `python-openstackclient` CLI
