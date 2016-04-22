@@ -1,4 +1,5 @@
-PROMPT="%{%F{255}%}[%{%f%}%{%F{61}%}%n%{%f%}%{%F{245}%}@%{%f%}%{%F{72}%}%m%{%f%}%{%F{245}%}:%{%f%}%{%F{18}%}%~%{%f%}%{%F{255}%}]%{%f%}%# "
+#PROMPT="%{%F{255}%}[%{%f%}%{%F{61}%}%n%{%f%}%{%F{245}%}@%{%f%}%{%F{72}%}%m%{%f%}%{%F{245}%}:%{%f%}%{%F{18}%}%~%{%f%}%{%F{255}%}]%{%f%}%# "
+PROMPT="[%{%F{9}%}%n%{%f%}@%{%F{4}%}%m%{%f%}:%{%F{8}%}%~%{%f%}]%# "
 #RPROMPT=$'$(vcs_info_wrapper)'
 
 #mkdir, cd into it
@@ -58,3 +59,6 @@ setopt EXTENDED_HISTORY
 
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+alias syncfork="git fetch upstream; git checkout master; git merge upstream/master"
+alias sshbb="ssh -l blueboxadmin integrated-test-wdc04-lab.openstack.blueboxgrid.com"

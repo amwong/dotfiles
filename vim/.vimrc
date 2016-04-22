@@ -24,7 +24,7 @@ set autoindent
 
 "search options
 set hlsearch
-"set ignorecase
+set smartcase
 
 "handle 80 character limit
 "highlights text past 80 chars -- python only
@@ -45,3 +45,5 @@ set ruler
 "hi StatusLine term=none ctermfg=8 ctermbg=7
 set statusline=%f\ %p
 set laststatus=2
+
+set paste
