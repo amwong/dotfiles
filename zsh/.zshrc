@@ -12,7 +12,7 @@ alias ls='ls --color=auto'
 alias lr='ls -R'
 alias la='ls -al'
 alias grep='grep --color=auto'
-alias reloadzsh=". $HOME/zsh/.zshrc && echo 'ZSH config reloaded from $HOME/zsh/.zshrc'"
+alias reloadzsh=". $HOME/.dotfiles/zsh/.zshrc && echo 'ZSH config reloaded from $HOME/.dotfiles/zsh/.zshrc'"
 
 # swap the contents of two files
 function swap()
