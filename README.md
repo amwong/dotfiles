@@ -2,4 +2,4 @@
 
 Switch to desired branch
 
-Run `sh ./setup.sh`
+Run `sudo sh ./setup.sh`
