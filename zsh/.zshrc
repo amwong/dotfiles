@@ -6,6 +6,9 @@ mkcd () {
   cd "$*"
 }
 
+export PIP_REQUIRE_VIRTUALENV=true
+source /usr/local/bin/virtualenvwrapper.sh
+alias updatedb="sudo /usr/libexec/locate.updatedb"
 alias .="source"
 alias l="ls"
 alias ls='ls --color=auto'
@@ -13,6 +16,8 @@ alias lr='ls -R'
 alias la='ls -al'
 alias grep='grep --color=auto'
 alias reloadzsh=". $HOME/.dotfiles/zsh/.zshrc && echo 'ZSH config reloaded from $HOME/.dotfiles/zsh/.zshrc'"
+alias syncfork="git fetch upstream; git checkout master; git merge upstream/master"
+alias sshbb="ssh -l blueboxadmin integrated-test-wdc04-lab.openstack.blueboxgrid.com"
 
 # swap the contents of two files
 function swap()
