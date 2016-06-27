@@ -47,3 +47,6 @@ set statusline=%f\ %p
 set laststatus=2
 
 set paste
+
+"clears terminal after exiting vim
+set term=rxvt
