@@ -7,11 +7,6 @@ set number
 "keypad on - must go before syntax enable 
 set term=ansi 
 
-"colors on
-syntax enable
-set t_Co=256
-colorscheme elflord
-
 set encoding=utf8
 
 "setting tabs = 4 spaces
@@ -50,3 +45,8 @@ set paste
 
 "clears terminal after exiting vim
 set term=rxvt
+
+"colors on
+syntax enable
+set t_Co=256
+colorscheme elflord
