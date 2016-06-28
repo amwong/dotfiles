@@ -1,12 +1,12 @@
 #!/bin/bash
 
+mv ../dotfiles $HOME/.dotfiles
+
 sudo apt-get install zsh
-ln zsh/.zshenv $HOME/.zshenv 
-ln zsh/.zshrc $HOME/.zshrc
+ln -s  ~/.dotfiles/zsh/.zshenv $HOME/.zshenv 
+ln -s ~/.dotfiles/zsh/.zshrc $HOME/.zshrc
 
 sudo apt-get install vim
-ln vim/.vimrc $HOME/.vimrc
-
-mv ../dotfiles $HOME/.dotfiles
+ln -s ~/.dotfiles/vim/.vimrc $HOME/.vimrc
 
 zsh
