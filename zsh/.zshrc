@@ -11,7 +11,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 alias updatedb="sudo /usr/libexec/locate.updatedb"
 alias .="source"
 alias l="ls"
-alias ls='ls --color=auto'
+alias ls='ls -G'
 alias lr='ls -R'
 alias la='ls -al'
 alias grep='grep --color=auto'
