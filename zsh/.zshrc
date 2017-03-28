@@ -19,6 +19,7 @@ alias syncfork="git fetch upstream; git checkout master; git merge upstream/mast
 alias sshbb="ssh -l blueboxadmin integrated-test-wdc04-lab.openstack.blueboxgrid.com"
 alias composer="php ~/development/imsphp/composer.phar"
 alias slvpn='sudo openconnect ibm.remote.softlayer.com'
+alias sshdev='ssh -o TCPKeepAlive=yes -L 49161:devappdal0501.softlayer.local:49161 adelwong@devappdal0501.softlayer.local'
 
 # swap the contents of two files
 function swap()
