@@ -1,4 +1,8 @@
-PROMPT="[%{%F{9}%}%n%{%f%}@%{%F{4}%}%m%{%f%}:%{%F{8}%}%~%{%f%}]%# "
+get_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+PROMPT="[%{%F{9}%}%n%{%f%}@%{%F{4}%}%m%{%f%}:%{%F{8}%}%~%{%f%}]%#%{%F{2}%}$(get_git_branch)%{%f%} "
 
 #mkdir, cd into it
 mkcd () {
@@ -20,6 +24,11 @@ alias sshbb="ssh -l blueboxadmin integrated-test-wdc04-lab.openstack.blueboxgrid
 alias composer="php ~/development/imsphp/composer.phar"
 alias slvpn='sudo openconnect dal05.remote.softlayer.com'
 alias sshdev='ssh -o TCPKeepAlive=yes -o ServerAliveInterval=50 -L 49161:devappdal0501.softlayer.local:49161 adelwong@devappdal0501.softlayer.local'
+alias gorias='cd $gorias'
+alias cl='clear'
+alias gitc='git checkout'
+alias gits='git status'
+alias kubest='kubectl get pods --all-namespaces'
 
 # swap the contents of two files
 function swap()
@@ -46,3 +55,9 @@ setopt EXTENDED_HISTORY
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+export gorias='/Users/adelia/go/src/github.ibm.com/riaas/'
+
+# print bx token 
+token() {
+bx iam oauth-tokens | awk '{print $4}'
+}
