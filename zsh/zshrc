@@ -52,3 +52,12 @@ alias gits='git status'
 # cmd completion
 autoload -Uz compinit
 compinit
+
+# NO PUSHING
+git() {
+  if [[ $@ == "push" ]]; then
+      command echo "WHAT ARE YOU DOING, DO \`cr\` INSTEAD"
+  else
+      command git "$@"
+  fi
+}
