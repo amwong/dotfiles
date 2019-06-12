@@ -1,8 +1,8 @@
 "detect file type
 filetype plugin on
+filetype indent on " load filetype-specific indent files
 
-"show line numbers
-set number
+set number " show line numbers
 
 "keypad on - must go before syntax enable 
 set term=ansi 
@@ -10,15 +10,15 @@ set term=ansi
 set encoding=utf8
 
 "setting tabs = 4 spaces
-set expandtab
+set expandtab " tabs are spaces
 set smarttab
-set tabstop=4
+set tabstop=4 " number of visual spaces per tab
 set shiftwidth=4
-set softtabstop=4
+set softtabstop=4 " number of spaces in tab when editing
 set autoindent
 
 "search options
-set hlsearch
+set hlsearch " highlight matches
 set smartcase
 
 "handle 80 character limit
@@ -33,10 +33,10 @@ set smartcase
 
 "cursor column color set
 highlight CursorLine ctermbg=none cterm=underline
-set cursorline
+set cursorline " highlight current line
 
 "status line - {relative file path}/{file name} percentage
-set ruler
+set ruler " show current col, row
 "hi StatusLine term=none ctermfg=8 ctermbg=7
 set statusline=%f\ %p
 set laststatus=2
@@ -47,6 +47,10 @@ set paste
 set term=rxvt
 
 "colors on
-syntax enable
+syntax enable " enable syntax processing
 set t_Co=256
 colorscheme elflord
+set showcmd " show command in bottom bar
+set wildmenu " visual autocomplete for cmd menu
+set lazyredraw " redraw only when needed
+set showmatch " highlight matching [{()}]

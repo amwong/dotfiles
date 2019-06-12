@@ -1,0 +1,54 @@
+# Swap the contents of two files
+function swap()
+{
+  if [ $# -ne 2 ]; then
+    echo "Usage: swap file1 file2"
+  else
+    tmpfile=$(mktemp $(dirname "$1")/XXXXXX)
+    mv "$1" "$tmpfile"
+    mv "$2" "$1"
+    mv "$tmpfile" "$2"
+    rm -f "$tmpfile"
+  fi
+}
+
+# Create directory and go into it
+mkcd () {
+  mkdir -p "$*"
+  cd "$*"
+}
+
+# History settings
+HISTFILE=$HOME/.zsh_history
+setopt APPEND_HISTORY
+HISTSIZE=1200
+SAVEHIST=1000
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt EXTENDED_HISTORY
+
+# Get current git branch
+git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+# Prompt. precmd() is necessary to keep it updating.
+precmd() { 
+  PROMPT="%F{221}%n%f@%F{32}%m%f %F{8}%B%~%b%f%F{2}$(git_branch)%f %# "
+}
+
+# Aliases
+alias l="ls -G"
+alias ls='ls -G'
+alias la="ls -Gal"
+alias lr="ls -GR"
+alias cl=clear
+alias .="source"
+alias grep='grep --color=auto'
+alias reloadzsh=". $HOME/.zshrc && echo 'ZSH config reloaded from $HOME/.zshrc'"
+alias gitc='git checkout'
+alias gits='git status'
+
+# Commands from https://wiki.archlinux.org/index.php/Zsh#Configure_Zsh
+# cmd completion
+autoload -Uz compinit
+compinit
