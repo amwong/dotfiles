@@ -1,3 +1,5 @@
+export PATH=$HOME/.toolbox/bin:$PATH
+
 # Swap the contents of two files
 function swap()
 {
@@ -47,8 +49,12 @@ alias grep='grep --color=auto'
 alias reloadzsh=". $HOME/.zshrc && echo 'ZSH config reloaded from $HOME/.zshrc'"
 alias gitc='git checkout'
 alias gits='git status'
+alias bb="brazil-build"
+alias sam="brazil-build-tool-exec sam"
 
 # Commands from https://wiki.archlinux.org/index.php/Zsh#Configure_Zsh
 # cmd completion
 autoload -Uz compinit
 compinit
+
+eval "$(direnv hook zsh)"
