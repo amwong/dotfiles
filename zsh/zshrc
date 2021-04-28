@@ -51,6 +51,11 @@ alias gitc='git checkout'
 alias gits='git status'
 alias bb="brazil-build"
 alias sam="brazil-build-tool-exec sam"
+alias vpnvpns='/opt/cisco/anyconnect/bin/vpn status'
+alias vpnvpnd='/opt/cisco/anyconnect/bin/vpn disconnect'
+alias adabeta="ada credentials update --account=615719991275 --provider=isengard --role=Admin --profile=marshal-beta"
+alias adagamma="ada credentials update --account=888256691291 --provider=isengard --role=Admin --profile=marshal-gamma"
+alias adaprod="ada credentials update --account=758175911025 --provider=isengard --role=ReadOnly --profile=marshal-prod"
 
 # Commands from https://wiki.archlinux.org/index.php/Zsh#Configure_Zsh
 # cmd completion
@@ -58,3 +63,11 @@ autoload -Uz compinit
 compinit
 
 eval "$(direnv hook zsh)"
+export PATH="/usr/local/opt/node@12/bin:$PATH"
+
+export PATH=$HOME/.toolbox/bin:$PATH
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home
+
+autoload bashcompinit && bashcompinit
+complete -C '/usr/local/bin/aws_completer' aws
+
